@@ -70,3 +70,17 @@ const obj = { Ihave: 'enough', money: 'to', buy: 'a', car: 'model' };
 console.log(giveMeFive(obj));
 console.log(giveMeFive({ Pears: 'than', apple: 'sweet' }));
 console.log(giveMeFive({ Our: 'earth', is: 'a', beautyful: 'world' }));
+
+// challenge 4-3
+const giveMeFive = function (obj) {
+  const five = [];
+  for (const [key, value] of Object.entries(obj)) {
+    // console.log(key, value)
+    value.length === 5 ? five.push(value) : '';
+  }
+  return five;
+};
+
+//Testing
+console.log(giveMeFive({ Pears: 'than', apple: 'sweet' }));
+console.log(giveMeFive({ Our: 'earth', is: 'a', beautyful: 'world' }));
