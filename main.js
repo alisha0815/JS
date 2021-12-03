@@ -184,3 +184,19 @@ const removeOdd = function (arr) {
 };
 console.log(removeOdd([1, 2, 3, 4, 5])); //output: [ 2, 4 ]
 console.log(removeOdd([1, 3, 5, 7, 9]));
+
+// Challenge 11
+const makeSum = (arr) => arr.reduce((a, b) => a + b, 0);
+
+// main function
+const threeInOne = function (arr) {
+  const sortedArr = [];
+  for (let i = 0; i < arr.length; i += 3) {
+    sortedArr.push(arr.slice(i, i + 3));
+  }
+  return sortedArr.map((numArr) => makeSum(numArr));
+};
+
+threeInOne([1, 2, 3]); // [6]
+threeInOne([1, 2, 3, 4, 5, 6]); // [6,15]
+threeInOne([1, 2, 3, 4, 5, 6, 7, 8, 9]); // [6,15,24]
