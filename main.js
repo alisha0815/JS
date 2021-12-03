@@ -103,3 +103,18 @@ const firstToLast = function (str, c) {
   const last = str.lastIndexOf(c);
   return !str.includes(c) ? -1 : last - first;
 };
+
+//Challenge 7
+const splitAndMerge = function (str, sep) {
+  return str
+    .split(' ')
+    .map((str) => str.split(''))
+    .map((str) => str.join(sep))
+    .join(' ');
+};
+
+// testing
+console.log(splitAndMerge('My name is John', ' '));
+console.log(splitAndMerge('My name is John', '-'));
+console.log(splitAndMerge('Hello World!', '.'));
+console.log(splitAndMerge('Hello World!', ','));
