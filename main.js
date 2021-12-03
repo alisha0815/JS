@@ -84,3 +84,15 @@ const giveMeFive = function (obj) {
 //Testing
 console.log(giveMeFive({ Pears: 'than', apple: 'sweet' }));
 console.log(giveMeFive({ Our: 'earth', is: 'a', beautyful: 'world' }));
+
+// Challenge 5
+const cutIt = function (arr) {
+  // find shortest
+  const shortest = arr.reduce((a, b) => (a.length <= b.length ? a : b));
+  // return the array of same string length
+  return arr.map((str) => str.slice(0, shortest.length));
+};
+
+// shorted length
+const shortest = arr.sort()[0];
+Math.min(...arr.map((str) => str.length));
