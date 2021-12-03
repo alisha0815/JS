@@ -118,3 +118,14 @@ console.log(splitAndMerge('My name is John', ' '));
 console.log(splitAndMerge('My name is John', '-'));
 console.log(splitAndMerge('Hello World!', '.'));
 console.log(splitAndMerge('Hello World!', ','));
+
+// Challenge 8
+const alienLanguage = function (str) {
+  return str
+    .toLowerCase()
+    .split(' ')
+    .map(
+      (str) => str.substring(0, str.length - 1).toUpperCase() + str.slice(-1)
+    )
+    .join(' ');
+};
