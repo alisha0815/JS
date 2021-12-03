@@ -22,3 +22,20 @@ function pickIt(arr) {
 
 const array = [4, 6, 8, 9, 10, 3, 6, 7];
 console.log(pickIt(array));
+
+// Challenge 3
+const howManydays = function (month) {
+  switch (month) {
+    case 2:
+      return 28;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      return 30;
+    default:
+      return 31;
+  }
+};
+
+console.log(howManydays(5));
