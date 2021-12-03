@@ -174,3 +174,13 @@ infiniteLoop(
   'left',
   2
 );
+
+// Challenge 10
+// Remove all the odd numbers
+
+const removeOdd = function (arr) {
+  arr.forEach((ele, i, arr) => (ele % 2 === 0 ? arr.splice(i, 1) : ''));
+  return arr;
+};
+console.log(removeOdd([1, 2, 3, 4, 5])); //output: [ 2, 4 ]
+console.log(removeOdd([1, 3, 5, 7, 9]));
