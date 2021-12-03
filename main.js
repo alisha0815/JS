@@ -96,3 +96,10 @@ const cutIt = function (arr) {
 // shorted length
 const shortest = arr.sort()[0];
 Math.min(...arr.map((str) => str.length));
+
+// challenge 6
+const firstToLast = function (str, c) {
+  const first = str.indexOf(c);
+  const last = str.lastIndexOf(c);
+  return !str.includes(c) ? -1 : last - first;
+};
