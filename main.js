@@ -57,3 +57,16 @@ const five = [];
 // Testing
 const obj = { Ihave: 'enough', money: 'to', buy: 'a', car: 'model' };
 console.log(giveMeFive(obj));
+
+// Challenge 4-2
+const giveMeFive = function (obj) {
+  return Object.entries(obj)
+    .flat()
+    .filter((str) => str.length === 5);
+};
+
+// Testing
+const obj = { Ihave: 'enough', money: 'to', buy: 'a', car: 'model' };
+console.log(giveMeFive(obj));
+console.log(giveMeFive({ Pears: 'than', apple: 'sweet' }));
+console.log(giveMeFive({ Our: 'earth', is: 'a', beautyful: 'world' }));
