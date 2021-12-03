@@ -200,3 +200,18 @@ const threeInOne = function (arr) {
 threeInOne([1, 2, 3]); // [6]
 threeInOne([1, 2, 3, 4, 5, 6]); // [6,15]
 threeInOne([1, 2, 3, 4, 5, 6, 7, 8, 9]); // [6,15,24]
+
+// Challenge12
+const isolateIt = function (arr) {
+  const newArr = [];
+  arr.map((str) => {
+    const first = str.slice(0, str.length / 2);
+    const second = str.slice(-str.length / 2);
+    newArr.push(first + '|' + second);
+  });
+  return console.log(newArr);
+};
+
+isolateIt(['abcd', 'efgh']); //["ab|cd","ef|gh"]
+isolateIt(['abcde', 'fghij']); // ["ab|de","fg|ij"]
+isolateIt(['1234', '56789']); // ["12|34","56|89"]
