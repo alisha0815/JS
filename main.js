@@ -237,3 +237,14 @@ const countGrade = function (scores) {
 
 console.log(countGrade([50, 60, 70, 80, 90, 100])); // {S:1, A:1, B:1, C:2, D:1, X:0}
 countGrade([65, 75, , 85, 85, 95, 100, 100]); // {S:2, A:1, B:2, C:2, D:0, X:0}
+
+// Ch 13
+const myArr = [];
+
+const incrArr = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const incrNum = arr[i] + 1;
+    myArr.push(incrNum);
+  }
+  return myArr;
+};
