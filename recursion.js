@@ -40,3 +40,18 @@ const multiply = function (arr, n) {
   }
   return product;
 };
+
+//6. Palindrome
+const isPalindrome = function (wrd) {
+  if (wrd.length <= 1) {
+    return true;
+  } else {
+    return wrd[0] === wrd[wrd.length - 1]
+      ? isPalindrome(wrd.slice(1, -1))
+      : false;
+  }
+};
+
+console.log(isPalindrome('madam')); // ➞ true
+console.log(isPalindrome('adieu')); // false
+console.log(isPalindrome('r')); // ➞ true
