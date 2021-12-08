@@ -93,3 +93,18 @@ console.log(factorial(5)); // ➞ 120
 console.log(factorial(3)); // ➞ 6
 console.log(factorial(1)); // ➞ 1
 console.log(factorial(0)); // ➞ 1
+
+//11. findHighest
+const findHighest = function (arr) {
+  // base line
+  if (arr.length === 0) return '';
+  if (arr.length === 1) return arr[0];
+  // recursion
+  return arr[arr.length - 1] >= findHighest(arr.slice(1, arr.length - 1))
+    ? arr[arr.length - 1]
+    : findHighest(arr.slice(1, arr.length - 1));
+};
+
+console.log(findHighest([-1, 3, 5, 6, 99, 12, 2])); // ➞ 99
+console.log(findHighest([0, 12, 4, 87])); // ➞ 87
+console.log(findHighest([6, 7, 8])); // ➞ 8
