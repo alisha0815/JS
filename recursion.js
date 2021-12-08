@@ -108,3 +108,25 @@ const findHighest = function (arr) {
 console.log(findHighest([-1, 3, 5, 6, 99, 12, 2])); // ➞ 99
 console.log(findHighest([0, 12, 4, 87])); // ➞ 87
 console.log(findHighest([6, 7, 8])); // ➞ 8
+
+//12. double factorial
+const doubleFactorial = function (n) {
+  return n < 1 ? 1 : n * doubleFactorial(n - 2);
+};
+
+//13. summArr - recursion
+const sumArr = function (arr) {
+  const newArr = arr.flat(Infinity);
+  if (newArr.length === 0) {
+    return 0;
+  } else {
+    return (
+      newArr[newArr.length - 1] + sumArr(newArr.slice(0, newArr.length - 1))
+    );
+  }
+};
+
+// method
+const SumArray = function (arr) {
+  return arr.flat(Infinity).reduce((a, b) => a + b);
+};
