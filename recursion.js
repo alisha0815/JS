@@ -55,3 +55,41 @@ const isPalindrome = function (wrd) {
 console.log(isPalindrome('madam')); // ➞ true
 console.log(isPalindrome('adieu')); // false
 console.log(isPalindrome('r')); // ➞ true
+
+//7. addup
+const addUp = function (n) {
+  return n === 0 ? 0 : n + addUp(n - 1);
+};
+
+//8. numberSquares
+const numberSquares = function (num) {
+  // base line
+  if (num === 0) {
+    return 0;
+  }
+  if (num === 1) {
+    return 1;
+  } else {
+    return num * num + numberSquares(num - 1);
+  }
+};
+
+console.log(numberSquares(2)); // ➞ 5
+
+//9. repetition
+const repetition = function (str, num) {
+  return num === 0 ? '' : str + repetition(str, num - 1);
+};
+
+console.log(repetition('ab', 3)); // ➞ "ababab"
+console.log(repetition('kiwi', 1)); // ➞ "kiwi"
+console.log(repetition('cherry', 2)); // ➞ "cherrycherry"
+
+//10. factorials
+const factorial = function (n) {
+  return n <= 1 ? 1 : n * factorial(n - 1);
+};
+console.log(factorial(5)); // ➞ 120
+console.log(factorial(3)); // ➞ 6
+console.log(factorial(1)); // ➞ 1
+console.log(factorial(0)); // ➞ 1
